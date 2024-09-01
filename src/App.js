@@ -1,59 +1,56 @@
+import './categories.styles.scss';
+import CategoryItem from './components/category-item/CategoryItem';
 const App = () => {
+  const categories = [
+    {
+      id: 1,
+      item: "Casuals",
+      Imgurl: "https://i.ibb.co/ZhsJFYr/Casual.jpg"
+    },
+    {
+      id: 2,
+      item: "Party",
+      Imgurl: "https://i.ibb.co/KF8352b/Fashion-For-Women-Official-Online-Store.jpg"
+    },
+    {
+      id: 3,
+      item: "Leather",
+      Imgurl: "https://i.ibb.co/B4L2K27/Jacket.png"
+    },
+    {
+      id: 4,
+      item: "Mens",
+      Imgurl: "https://i.ibb.co/kSk88rp/Casuals.jpg"
+    },
+    {
+      id: 5,
+      item: "Womens",
+      Imgurl: "https://i.ibb.co/k5BQs75/pose.jpg"
+    },
+    {
+      id: 6,
+      item: "Suite",
+      Imgurl: "https://i.ibb.co/jGcs2sn/Suite.jpg"
+    },
+    {
+      id: 7,
+      item: "Ethnic",
+      Imgurl: "https://i.ibb.co/RC05YFY/Ethnic.jpg"
+    },
+    {
+      id: 8,
+      item: "Exotic",
+      Imgurl: "https://i.ibb.co/Npc9S70/Exotic.png"
+    },
+  ];
+
   return (
-  <div className="categories-container">
-    <div className="category-container">
-      {/* img */}
-      <div className="category-body-container">
-      <h2>Hats</h2>
-      <p>Shop Now</p>
-      </div>
+    
+    <div className="categories-container">{
+      categories.map(({Imgurl,item,id}) => (
+        <CategoryItem Imgurl ={Imgurl} item ={item} key={id}/>    
+    ))}
     </div>
-    <div className="category-container">
-      {/* img */}
-      <div className="category-body-container">
-        <h2>Hoodies</h2>
-        <p>Shop Now</p>
-      </div>
-    </div>                               
-    <div className="category-container">
-      {/* img */}
-      <div className="category-body-container">
-        <h2>Air Jordans</h2>
-        <p>Shop Now</p>
-      </div>
-    </div>
-    <div className="category-container">
-        {/* img */}
-        <div className="category-body-container">
-          <h2>Leather</h2>
-          <p>Shop Now</p>
-        </div>
-    </div>
-      <div className="category-container">
-        {/* img */}
-        <div className="category-body-container">
-          <h2>Suite</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* img */}
-        <div className="category-body-container">
-          <h2>Women's</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-
-      <div className="category-container">
-        {/* img */}
-        <div className="category-body-container">
-          <h2>Men's</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-
-  </div>
-
   )
-}
+};
 export default App;

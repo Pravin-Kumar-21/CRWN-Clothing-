@@ -45,6 +45,7 @@ const App = () => {
   ];
 
   return (
+    
     <div className="categories-container">{
       categories.map(({Imgurl,item,id}) => (
         <CategoryItem Imgurl ={Imgurl} item ={item} key={id}/>    

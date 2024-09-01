@@ -1,5 +1,5 @@
-import './categories.styles.scss';
-import CategoryItem from './components/category-item/CategoryItem';
+import CategoryList from "./components/category-list/CategoryList.jsx";
+import './App.scss'
 const App = () => {
   const categories = [
     {
@@ -45,11 +45,8 @@ const App = () => {
   ];
 
   return (
-    
-    <div className="categories-container">{
-      categories.map(({Imgurl,item,id}) => (
-        <CategoryItem Imgurl ={Imgurl} item ={item} key={id}/>    
-    ))}
+    <div className="Overview">
+      <CategoryList categories={categories}/>
     </div>
   )
 };

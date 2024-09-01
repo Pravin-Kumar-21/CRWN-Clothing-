@@ -2,10 +2,8 @@ import React from 'react'
 import './CategoryItem.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-const CategoryItem =  ({id, item, Imgurl}) =>{
-console.log(id)
-console.log(item)
-console.log(Imgurl)
+const CategoryItem =  ({category}) =>{
+const {item, Imgurl} = category
 return (
   <div className="category-container">
     <div className="background-image" style={{ backgroundImage: `url(${Imgurl})` }}/>

@@ -1,5 +1,5 @@
 import CategoryList from '../../components/category-list/CategoryList'
-import './home.component.scss'
+import './home.styles.scss'
 const Home = () => {
   const categories = [
     {
